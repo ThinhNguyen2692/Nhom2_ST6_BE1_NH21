@@ -234,23 +234,17 @@
 							</ul>
 						</div>
 						<!-- /store top filter -->
-
+					
 						<!-- store products -->
 						<div class="row">
-							<?php
-							if(isset($_GET['keyword'])):
-								if (isset($_GET['searchCol'])):
-								$keyword = $_GET['keyword'];
-								$searchCol = $_GET['searchCol'];
-								$search = $product->search($keyword);
-
-								$perPage = 6;
-								$page = isset($_GET['page'])?$_GET['page']:1; 			
-								$total = count($search); 					
-								$url = $_SERVER['PHP_SELF']."?searchCol=".$searchCol. "&keyword".$keyword;
-								$get3ProductsByType = $product -> get3ProductsByType($search, $page, $perPage);
-								foreach($get3ProductsByType as $value): 
-								if($searchCol == $value['type_id'] || $searchCol == 0):
+							<?php							
+								if(isset($_GET['keyword'])):								
+									$keyword = $_GET['keyword'];								
+									$search = $product->search($keyword);
+									
+						
+							foreach($search as $value):	
+										
 								?>
 
 								<div class="col-md-4 col-xs-6">
@@ -284,9 +278,10 @@
 									</div>
 								</div>
 							</div>
-									<?php
-									endif;
-									 endforeach;
+									<?php								
+									endforeach;
+							
+									endif																								
 									?>
 
 
@@ -303,19 +298,12 @@
 						<div class="store-filter clearfix">
 							<span class="store-qty">Showing 20-100 products</span>
 							<ul class="store-pagination">
-								<li class="active">1</li>
-								<!-- <li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-								<?php echo $product->paginate($url, $total, $perPage,$page); ?> -->
+						
+							
 							</ul>
 						</div>
 						<!-- /store bottom filter -->
-						<?php 
-						endif;
-						endif;
-						?>
+						<?php  ?>
 					</div>
 					<!-- /STORE -->
 				</div>

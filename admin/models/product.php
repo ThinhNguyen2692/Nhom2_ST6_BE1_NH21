@@ -40,4 +40,5 @@ class Product extends Db
          return $sql->execute(); //return an array
     }
 
+
 }

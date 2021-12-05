@@ -248,6 +248,15 @@ $getAllprotype = $protype->getAllProtype();
               </p>
             </a>
           </li>
+        
+            <a href="editproduct.php" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Edit product
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
           <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
