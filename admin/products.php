@@ -76,6 +76,7 @@
                       <?php echo $value['name'] ?>
                       </td>
                       <td>
+                        
                         <img style="width:50px" src="../img/<?php echo $value['image'] ?>" alt="">
                       <td>
                       <?php echo number_format($value['price'])?>
@@ -87,9 +88,10 @@
                       <?php echo $value['type_name'] ?>
                       </td>
                       <td class="project-actions text-center" >
-                          <a class="btn btn-info btn-sm" href="#">
+                          <a class="btn btn-info btn-sm" href="editproduct.php?id=<?php echo $value['id']?>&name=<?php echo $value['name']?>&img=<?php echo $value['image'] ?>&price=<?php echo $value['price']?>&manu=<?php echo $value['manu_name'] ?>&type=<?php echo $value['type_name']?>&feature=<?php echo $value['feature']?>&created_at=<?php echo $value['created_at']?>&description=<?php echo $value['description']?>">
                               <i class="fas fa-pencil-alt">
                               </i>
+                             
                               Edit
                           </a>
                           <a class="btn btn-danger btn-sm" href="del.php?id=<?php echo $value['id']?>">

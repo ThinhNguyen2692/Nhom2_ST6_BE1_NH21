@@ -33,6 +33,25 @@ class Product extends Db
         return $sql->execute(); //return an array
     }
 
+    public function updateProduct($id,$name,$price,$desc,$image,$feature,$date)
+    {
+       if($image == null){
+        $sql = self::$connection->prepare("UPDATE `products`
+        SET `name`='$name',`price`='$price', `description`='$desc',`feature`='$feature',`created_at`='$date'
+        WHERE `id`='$id'");
+       //$sql->bind_param("siiissii",$name,$manu_id,$type_id,$price,$image,$desc,$feature,$date); 
+       
+        return $sql->execute(); //return an array
+       } else {
+            $sql = self::$connection->prepare("UPDATE `products`
+            SET `name` = '$name',`price`='$price',`image` = '$image', `description`='$desc',`feature`='$feature',`created_at`='$date'
+            WHERE `id`='$id'");
+           //$sql->bind_param("siiissii",$name,$manu_id,$type_id,$price,$image,$desc,$feature,$date); 
+           
+            return $sql->execute(); //return an array
+       }
+    }
+
     public function delProduct($id)
     {
         $sql = self::$connection->prepare("DELETE FROM `products` WHERE `id`= ?");
