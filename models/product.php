@@ -27,8 +27,31 @@ class Product extends Db
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
-
     }
+
+    public function getSanPhamMoi()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM `products` WHERE `products`.`created_at` < NOW() ORDER BY ABS(DATEDIFF(`products`.`created_at`, NOW())) ASC LIMIT 10");
+        $sql->execute(); //return an object
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+//Viet phuong thuc lay ra tat ca san pham noi bat
+    public function getSanPhamNoiBat()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM product
+        WHERE feature = 1 
+        ORDER BY id DESC");
+        $sql->execute(); //return an object
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+
+
+
+
     public function search($keyword)
     {
         $sql = self::$connection->prepare("SELECT * FROM products 
@@ -62,18 +85,7 @@ class Product extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
-    //Viet phuong thuc lay ra tat ca san pham noi bat
-    function getFeatureProducts($page, $perPage){
-        $firstLink = ($page - 1) * $perPage;
-        $sql = self::$connection->prepare("SELECT * FROM product
-         WHERE feature = 1 
-         ORDER BY id DESC
-         LiMIT $firstLink, $perPage");
-        $sql->execute();//return an object
-        $items = array();
-        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
-        return $items; //return an array
-    }
+    
 
     function paginate($url, $total, $perPage,$page)
     {
@@ -89,5 +101,7 @@ class Product extends Db
      	}
      	return $link;
 }
+
+
 
 }

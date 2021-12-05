@@ -8,6 +8,14 @@ require "models/protype.php";
 $protype = new Protype;
 //var_dump($getAllProducts);
 ?>
+
+<?php 
+session_start();
+if(isset($_SESSION['cart']))
+{
+	var_dump($_SESSION['cart']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -108,8 +116,9 @@ $protype = new Protype;
 									</a>
 								</div>
 								<!-- /Wishlist -->
-
+							
 								<!-- Cart -->
+								
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
@@ -129,16 +138,7 @@ $protype = new Protype;
 												<button class="delete"><i class="fa fa-close"></i></button>
 											</div>
 
-											<div class="product-widget">
-												<div class="product-img">
-													<img src="./img/product02.png" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">product name goes here</a></h3>
-													<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
-												</div>
-												<button class="delete"><i class="fa fa-close"></i></button>
-											</div>
+											
 										</div>
 										<div class="cart-summary">
 											<small>3 Item(s) selected</small>
