@@ -268,7 +268,7 @@ if (isset($_POST['submitCart'])) {
                         <div class="form-group col-md-12">
                             <a class="btn btn-default update" href="index.php">Continue Buying</a>
                             <a class="btn btn-default check_out" href="#">Delete All</a>
-                            <input type="submit" name="submit" class="btn btn-primary pull-right btn-default" value="Order">
+                            <input type="submit" name="submit" class="btn btn-default pull-right btn-default" value="Order">
 
                         </div>
                     </form>
