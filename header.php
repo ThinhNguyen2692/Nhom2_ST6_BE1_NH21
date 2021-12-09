@@ -7,15 +7,10 @@ $getAllProducts = $product->getAllProducts();
 require "models/protype.php";
 $protype = new Protype;
 //var_dump($getAllProducts);
+session_start();
 ?>
 
-<?php 
-session_start();
-if(isset($_SESSION['cart']))
-{
-	var_dump($_SESSION['cart']);
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -120,12 +115,13 @@ if(isset($_SESSION['cart']))
 								<!-- Cart -->
 								
 								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+									<!-- data-toggle="dropdown" -->
+									<a   href="cart.php"  class="dropdown-toggle"  aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
 										<span>Your Cart</span>
-										<div class="qty">3</div>
+										<div class="qty">x</div>
 									</a>
-									<div class="cart-dropdown">
+									<!-- <div class="cart-dropdown">
 										<div class="cart-list">
 											<div class="product-widget">
 												<div class="product-img">
@@ -146,10 +142,10 @@ if(isset($_SESSION['cart']))
 										</div>
 										<div class="cart-btns">
 											<a href="#">View Cart</a>
-											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+											<a href="cart.php">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
 									</div>
-								</div>
+								</div> -->
 								<!-- /Cart -->
 
 								<!-- Menu Toogle -->

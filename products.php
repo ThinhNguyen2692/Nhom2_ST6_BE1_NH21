@@ -284,8 +284,10 @@
 										</div>
 									</div>
 									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-									</div>
+										<a href="cart.php?id=<?php echo $value['id'] ?>" >
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button><
+											</a>	
+										</div>
 								</div>
 							</div>
 							<!-- /product -->

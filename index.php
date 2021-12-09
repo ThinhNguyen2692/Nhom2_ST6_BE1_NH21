@@ -69,12 +69,12 @@ include "header.php";
 					<h3 class="title">New Products</h3>
 					<div class="section-nav">
 						<ul class="section-tab-nav tab-nav">
-						<?php
-						$getAllProtype = $protype->getAllProtype();
-						foreach($getAllProtype as $value):
+							<?php
+							$getAllProtype = $protype->getAllProtype();
+							foreach ($getAllProtype as $value) :
 							?>
-						<li><a href="products.php?type_id=<?php echo $value['type_id'] ?>"><?php echo $value['type_name']?></a></li>
-						<?php endforeach; ?>
+								<li><a href="products.php?type_id=<?php echo $value['type_id'] ?>"><?php echo $value['type_name'] ?></a></li>
+							<?php endforeach; ?>
 						</ul>
 					</div>
 				</div>
@@ -115,11 +115,12 @@ include "header.php";
 											</div>
 										</div>
 										<div class="add-to-cart">
-										<a href="addCard.php?id=<?php echo $value['id'] ?>" >
-											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button><
-											</a>
-				
+											<a href="cart.php?id=<?php echo $value['id'] ?>">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												< </a>
 										</div>
+
+
 									</div>
 								<?php endforeach; ?>
 								<!-- /product -->
@@ -197,12 +198,12 @@ include "header.php";
 					<h3 class="title">Top selling</h3>
 					<div class="section-nav">
 						<ul class="section-tab-nav tab-nav">
-						<?php
-						$getAllProtype = $protype->getAllProtype();
-						foreach($getAllProtype as $value):
+							<?php
+							$getAllProtype = $protype->getAllProtype();
+							foreach ($getAllProtype as $value) :
 							?>
-						<li><a href="products.php?type_id=<?php echo $value['type_id'] ?>"><?php echo $value['type_name']?></a></li>
-						<?php endforeach; ?>
+								<li><a href="products.php?type_id=<?php echo $value['type_id'] ?>"><?php echo $value['type_name'] ?></a></li>
+							<?php endforeach; ?>
 						</ul>
 					</div>
 				</div>
@@ -217,42 +218,44 @@ include "header.php";
 						<div id="tab2" class="tab-pane fade in active">
 							<div class="products-slick" data-nav="#slick-nav-2">
 								<!-- product -->
-								<?php 
+								<?php
 								$getTenProducts = $product->getTenProducts();
 								foreach ($getTenProducts as $value) : ?>
-							
-								<div class="product">
-									<div class="product-img">
-										<img src="./img/<?php echo $value['image'] ?>" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">NEW</span>
+
+									<div class="product">
+										<div class="product-img">
+											<img src="./img/<?php echo $value['image'] ?>" alt="">
+											<div class="product-label">
+												<span class="sale">-30%</span>
+												<span class="new">NEW</span>
+											</div>
+										</div>
+										<div class="product-body">
+											<p class="product-category">Category</p>
+											<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
+											<h4 class="product-price"><?php echo number_format($value['price']) ?> VND </del></h4>
+											<div class="product-rating">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+											</div>
+											<div class="product-btns">
+												<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
+												<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+												<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+											</div>
+										</div>
+										<div class="add-to-cart">
+											<a href="cart.php?id=<?php echo $value['id'] ?>">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												< </a>
 										</div>
 									</div>
-									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
-										<h4 class="product-price"><?php echo number_format($value['price']) ?> VND </del></h4>
-										<div class="product-rating">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="product-btns">
-											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-											<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-										</div>
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-									</div>
-								</div>
-								<!-- /product -->
-<?php endforeach ?>
-							
+									<!-- /product -->
+								<?php endforeach ?>
+
 							</div>
 							<div id="slick-nav-2" class="products-slick-nav"></div>
 						</div>
@@ -274,17 +277,17 @@ include "header.php";
 	<div class="container">
 		<!-- row -->
 		<div class="row">
-		<div class="col-md-4 col-xs-6">
-						<div class="section-title">
-							<h4 class="title">Top selling</h4>
-							<div class="section-nav">
-								<div id="slick-nav-3" class="products-slick-nav"></div>
-							</div>
-						</div>
+			<div class="col-md-4 col-xs-6">
+				<div class="section-title">
+					<h4 class="title">Top selling</h4>
+					<div class="section-nav">
+						<div id="slick-nav-3" class="products-slick-nav"></div>
+					</div>
+				</div>
 
-						<div class="products-widget-slick" data-nav="#slick-nav-3">
-						<?php
-						$getTenProducts = $product->getTenProducts();
+				<div class="products-widget-slick" data-nav="#slick-nav-3">
+					<?php
+					$getTenProducts = $product->getTenProducts();
 					foreach ($getTenProducts as $value) : ?>
 						<div class="products-widget-slick" data-nav="#slick-nav-3">
 							<div>
@@ -300,12 +303,12 @@ include "header.php";
 										<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
 										<h4 class="product-price"><?php echo number_format($value['price']) ?></h4>
 									</div>
-									</div>
-							</div>	
+								</div>
 							</div>
-							<?php endforeach; ?>
 						</div>
-					</div>
+					<?php endforeach; ?>
+				</div>
+			</div>
 
 			<div class="col-md-4 col-xs-6">
 				<div class="section-title">
@@ -340,7 +343,7 @@ include "header.php";
 						</div>
 					<?php endforeach; ?>
 					<div>
-					<!-- .... -->
+						<!-- .... -->
 					</div>
 				</div>
 			</div>
@@ -356,7 +359,7 @@ include "header.php";
 				</div>
 
 				<div class="products-widget-slick" data-nav="#slick-nav-5">
-				<?php
+					<?php
 					$getTenProducts = $product->getTenProducts();
 					foreach ($getTenProducts as $value) : ?>
 						<div class="products-widget-slick" data-nav="#slick-nav-3">
@@ -379,15 +382,15 @@ include "header.php";
 
 						</div>
 					<?php endforeach; ?>
-					
+
 				</div>
 			</div>
-			</div>
-
 		</div>
-		<!-- /row -->
+
 	</div>
-	<!-- /container -->
+	<!-- /row -->
+</div>
+<!-- /container -->
 </div>
 <!-- /SECTION -->
 
