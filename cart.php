@@ -106,7 +106,8 @@ if (isset($_POST['submitCart'])) {
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Mobile Shopping</title>
-    <link rel="icon" href="./images/logo.png" type="image/icon type">
+    <!-- doi avt tieu de -->
+    <link rel="icon" href="./img/tomato.jpg" type="image/icon type">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -265,10 +266,14 @@ if (isset($_POST['submitCart'])) {
                                 font-weight: bold;
                             }
                         </style>
+                       
                         <div class="form-group col-md-12">
                             <a class="btn btn-default update" href="index.php">Continue Buying</a>
                             <a class="btn btn-default check_out" href="#">Delete All</a>
-                            <input type="submit" name="submit" class="btn btn-default pull-right btn-default" value="Order">
+                             <!-- btn-primary // viền màu blue-->
+                            <!-- <a class="btn btn-default pull-right" href="a.html">Order</a> -->
+                            <input type="submit" name="submit" class="btn pull-right btn-default" value="Order">
+                            
 
                         </div>
                     </form>

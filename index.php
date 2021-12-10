@@ -94,12 +94,18 @@ include "header.php";
 								foreach ($getSanPhamMoi as $value) : ?>
 									<div class="product">
 										<div class="product-img">
+									
 											<img src="./img/<?php echo $value['image'] ?>" alt="">
-
+											
 										</div>
 										<div class="product-body">
 											<p class="product-category">Category</p>
+
 											<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
+										
+
+
+
 											<h4 class="product-price"><?php echo number_format($value['price']) ?> VND </h4>
 											<div class="product-rating">
 												<i class="fa fa-star"></i>
