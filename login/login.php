@@ -11,6 +11,7 @@ if(isset($_POST['submit'])){
       $getUser =  $user->checkid($sdt);
       foreach ($getUser as $value) {
         $_SESSION['id'] = $value['role_id'];
+        $_SESSION['idkh'] = $value['id'];
       }
       if($_SESSION['id'] == 0){
         header('location:../admin/index.php');
