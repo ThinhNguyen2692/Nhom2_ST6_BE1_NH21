@@ -2,6 +2,7 @@
   session_start();
   if(!isset($_SESSION['id'])){
     header('location:../login/index.php');
+  }
     class Db
     {
         public static $connection;
@@ -14,4 +15,5 @@
             return self::$connection;
         }
     }
+
 ?>

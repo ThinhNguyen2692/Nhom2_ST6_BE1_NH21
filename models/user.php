@@ -1,4 +1,5 @@
 <?php
+
     class User extends Db {
         public function checkLogin($sdt,$pass){
             $sql = self::$connection->prepare("SELECT * FROM user where `sodienthoai`=? AND `password`=?");
@@ -21,5 +22,6 @@
             $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
             return $items;
         }
+        
     }
 ?>

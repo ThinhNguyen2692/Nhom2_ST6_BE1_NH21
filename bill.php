@@ -18,7 +18,7 @@ include "cart_header.php";
                                 <td class="description">Name</td>
                                 <td class="price">Price</td>
                                 <td class="quantity">Quantity</td>
-                                <td>Delete</td>
+                             
                             </tr>
                         </thead>
                         <tbody>
@@ -41,14 +41,13 @@ include "cart_header.php";
                                         </td>
                                         <td class="cart_quantity">
                                             <div class="cart_quantity_button">
-                                                <a class="cart_quantity_up" href="changeQuantity.php?truQuantity=<?php echo $value['id'] ?>"> - </a>
-                                                <input class="cart_quantity_input" type="text" name="quantity" value="<?php echo $value['quantity'] ?>" autocomplete="off" size="2">
-                                                <a class="cart_quantity_down" href="changeQuantity.php?congQuantity=<?php echo $value['id'] ?>"> + </a>
+
+                                                <p> <?php echo $value['quantity'] ?> </p>
+                                                <!-- <input class="cart_quantity_input" type="text" name="quantity" value="<?php echo $value['quantity'] ?>" autocomplete="off" size="2"> -->
+                                               
                                             </div>
                                         </td>
-                                        <td class="cart_delete">
-                                            <a class="cart_quantity_delete" href="deleteCart.php?id=<?php echo $value['id'] ?>"><i class="fa fa-times"></i></a>
-                                        </td>
+                                       
                                         <td class="cart_total">
                                             <p class="cart_total_price"></p>
                                         </td>
@@ -79,20 +78,41 @@ include "cart_header.php";
                                 </style>
                             <?php } ?>
                         </tr>
+
                     </table>
+                    <?php 
+                    if(isset($_SESSION['user'])){
+                        $Name = $_SESSION['user']['Name'];
+                        $email = $_SESSION['user']['email'];
+                        $sodienthoai = $_SESSION['user']['sodienthoai'];
+                        $Diachi = $_SESSION['user']['Diachi'];
+                    }else{
+                        $Name = "";
+                        $email = "";
+                        $sodienthoai = "";
+                        $Diachi = "";
+                    }
+                    ?>
+                     <td>
+                                <h3><b>Customer information</b></h3>
+                            </td>
                     <form id="main-contact-form" class="contact-form row" name="contact-form" method="post" action="?order=ordered">
-                        <!-- <div class="form-group col-md-6">
-                            <input type="text" name="name" class="form-control" placeholder="Name">
+                        <div class="form-group col-md-6">
+                            Full name
+                            <input type="text" name="Name" class="form-control"value="<?php echo $Name; ?>">
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="email" name="email" class="form-control" placeholder="Email">
+                            Email
+                            <input type="email" name="email" class="form-control" value="<?=$email?>">
                         </div>
                         <div class="form-group col-md-12">
-                            <input type="text" name="subject" class="form-control" placeholder="Phone number">
+                        Phone
+                            <input type="text" name="sodienthoai" class="form-control" value="<?=$sodienthoai?>">
                         </div>
                         <div class="form-group col-md-12">
-                            <textarea name="message" id="message" class="form-control" rows="3" placeholder="Your Message Here"></textarea>
-                        </div> -->
+                        Address
+                            <textarea name="Diachi" id="address" class="form-control" rows="2" value="<?=$Diachi?>"></textarea>
+                        </div>
                         <style>
                             .btn-default {
                                 background-color: #D10024;
@@ -112,8 +132,7 @@ include "cart_header.php";
                             <a class="btn btn-default check_out" href="#">Delete All</a>
                              <!-- btn-primary // viền màu blue-->
                             <!-- <a class="btn btn-default pull-right" href="a.html">Order</a> -->
-                            <a class="btn pull-right btn-default" href="bill.php">Order</a>
-                            <!-- <input type="submit" name="submit" class="btn pull-right btn-default" value="Order"> -->
+                            <input type="submit" name="submit" class="btn pull-right btn-default" value="Order">
                             
 
                         </div>
