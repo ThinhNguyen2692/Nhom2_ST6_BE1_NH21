@@ -93,6 +93,7 @@ include "cart_header.php";
                         $Diachi = "";
                     }
                     ?>
+
                      <td>
                                 <h3><b>Customer information</b></h3>
                             </td>

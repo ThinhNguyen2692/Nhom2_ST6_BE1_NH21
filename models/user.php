@@ -1,6 +1,14 @@
 <?php
 
     class User extends Db {
+           //Lấy danh sách tất cả user:
+    static function getAllUsers() {
+        $sql = self::$connection->prepare("SELECT * FROM user");
+        $sql->execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array.
+    }
         public function checkLogin($sdt,$pass){
             $sql = self::$connection->prepare("SELECT * FROM user where `sodienthoai`=? AND `password`=?");
             $sql->bind_param("ss",$sdt, $pass);

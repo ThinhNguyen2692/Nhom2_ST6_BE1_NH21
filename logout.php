@@ -1,0 +1,9 @@
+<?php
+session_start();
+    if(isset($_SESSION['sdt'])){
+        unset($_SESSION['sdt']);
+        header('location:login/index.php');
+    }
+    else{
+        header('location:login/index.php');
+    }
