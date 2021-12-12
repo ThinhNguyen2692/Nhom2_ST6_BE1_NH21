@@ -94,15 +94,19 @@ include "header.php";
 								foreach ($getSanPhamMoi as $value) : ?>
 									<div class="product">
 										<div class="product-img">
-									
+
 											<img src="./img/<?php echo $value['image'] ?>" alt="">
-											
+
 										</div>
 										<div class="product-body">
 											<p class="product-category">Category</p>
 
-											<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
-										
+
+											
+
+											<h3 class="product-name"><a href="xxx.php?id=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></h3>
+
+
 
 
 
