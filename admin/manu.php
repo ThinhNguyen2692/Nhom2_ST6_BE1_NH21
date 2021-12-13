@@ -56,14 +56,13 @@
               <tbody>
                  
                   <?php 
-                   $getAlluser = $user->getAllUsers();
-                  foreach($getAlluser as $value):?>
+                  foreach($getAllManu as $value):?>
                   <tr>
                       <td>
-                          <?php echo $value['id'] ?>
+                          <?php echo $value['manu_id'] ?>
                       </td>
                       <td>
-                      <?php echo $value['Name'] ?>
+                      <?php echo $value['manu_name'] ?>
                       </td>
                     
                       <td class="project-actions text-center" >
