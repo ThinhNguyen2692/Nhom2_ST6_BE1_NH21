@@ -5,6 +5,8 @@ require "models/product.php";
 $product = new Product();
 require "models/protype.php";
 require "models/manufacture.php";
+require "models/user.php";
+$user = new user;
 $protype = new ProType();
 $Manufacture = new Manufacture();
 $getAllManu = $Manufacture->getAllManu();
@@ -222,10 +224,10 @@ $getAllprotype = $protype->getAllProtype();
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="index.php" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard               
+                Home              
               </p>
             </a>
           
@@ -249,10 +251,28 @@ $getAllprotype = $protype->getAllProtype();
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="manu.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-              Menufatures
+              Manufatures
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+               Protypes
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="users.php" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+               user
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>

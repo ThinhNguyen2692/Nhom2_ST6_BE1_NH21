@@ -20,7 +20,6 @@ if(isset($_POST['submit'])){
     $image = $_FILES['image']['name'];
     
     $product->updateProduct($id,$name,$price,$desc,$image,$feature,$date);
-    
     $target_dir = "../img/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);

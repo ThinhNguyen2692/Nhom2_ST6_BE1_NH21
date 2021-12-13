@@ -30,6 +30,10 @@
             $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
             return $items;
         }
-        
+        public function register($name,$diachi,$email,$sdt,$pass){
+            $role_id = 1;
+            $sql = self::$connection->prepare("INSERT INTO `user`(`Name`, `Diachi`, `email`, `sodienthoai`, `role_id`, `password`) VALUES ('$name','$diachi','$email','$sdt','$role_id','$pass')");
+            return $sql->execute(); //return an array
+        }
     }
 ?>

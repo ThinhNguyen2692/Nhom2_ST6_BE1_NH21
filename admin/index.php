@@ -31,14 +31,19 @@ include "header.php";
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
-
-                <p>New Orders</p>
+               <?php 
+               $getSoSP = $product->getAllDemsanpham(); 
+               foreach ($getSoSP as $value) {
+                 $temp = $value['count(id)'];
+               }
+               ?>
+                <h3><?php echo $temp?></h3>
+                <p>Product</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="products.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -46,9 +51,15 @@ include "header.php";
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <?php 
+               $getSomanu = $Manufacture->getAllSoManu(); 
+               foreach ($getSomanu as $value) {
+                 $temp = $value['count(manu_id)'];
+               }
+               ?>
+                <h3><?php echo $temp?></h3>
 
-                <p>Bounce Rate</p>
+                <p>Manufacture</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -61,9 +72,15 @@ include "header.php";
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+              <?php 
+               $getSotype = $protype->getAllSotype(); 
+               foreach ($getSotype as $value) {
+                 $temp = $value['count(type_id)'];
+               }
+               ?>
+                <h3><?php echo $temp?></h3>
 
-                <p>User Registrations</p>
+                <p>Protype</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -72,20 +89,7 @@ include "header.php";
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>65</h3>
-
-                <p>Unique Visitors</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
+         
           <!-- ./col -->
         </div>
         <!-- /.row -->
