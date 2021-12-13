@@ -1,5 +1,6 @@
 <?php
 include "header.php";
+echo "demo";
 ?>
 
   <!-- Content Wrapper. Contains page content -->
