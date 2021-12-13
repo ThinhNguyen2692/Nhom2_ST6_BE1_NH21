@@ -100,6 +100,7 @@ include "header.php";
 										</div>
 										<div class="product-body">
 											<p class="product-category">Category</p>
+											
 
 
 											
@@ -128,6 +129,7 @@ include "header.php";
 											<a href="cart.php?id=<?php echo $value['id'] ?>">
 												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 												< </a>
+
 										</div>
 
 
