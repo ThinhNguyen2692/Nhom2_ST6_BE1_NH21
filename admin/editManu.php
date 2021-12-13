@@ -23,7 +23,7 @@
     <!-- Main content -->
     <section class="content">
 
-      <form action="updateUser.php" method="post" enctype="multipart/form-data" >
+      <form action="updatemanu.php" method="post" enctype="multipart/form-data" >
         
       <div class="card card-primary">
             <div class="card-header">
@@ -37,36 +37,12 @@
             </div>
             <div class="card-body">
             <div class="form-group">
-                <label for="inputName">ID</label>
-                <input type="text" id="inputName" value="<?php echo $_GET['id']?>" class="form-control" name="id">
+                <label for="inputName">Manufacture id</label>
+                <input type="text" id="inputName" value="<?php echo $_GET['id']?>" class="form-control" name="id" readonly>
               </div>
               <div class="form-group">
-                <label for="inputName">Full Name</label>
+                <label for="inputName">Manufacture name</label>
                 <input type="text" id="inputName" value="<?php echo $_GET['name']?>" class="form-control" name="name">
-              </div>
-              <div class="form-group">
-                <label for="inputProjectLeader">Địa chỉ</label>
-                <input type="text" id="inputProjectLeader" value="<?php echo $_GET['diachi']?>" class="form-control" name="diachi">
-              </div>
-              <div class="form-group">
-                <label for="inputProjectLeader">Email</label>
-                <input type="text" id="inputProjectLeader" value="<?php echo $_GET['email']?>" class="form-control" name="email">
-              </div>
-              <div class="form-group">
-                <label for="inputProjectLeader">Number Phone</label>
-                <input type="text" id="inputProjectLeader" value="<?php echo$_GET['phone']?>" class="form-control" name="phone">
-              </div>
-              <div class="form-group">
-                <label for="inputStatus">Role_id</label>
-                <select class="form-control custom-select"  name="role">
-                <option value="<?php echo $_GET['role']?>"><?php echo $_GET['role']?></option>
-                    <option value="1">1</option>
-                    <option value="0">0</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="inputProjectLeader">Password</label>
-                <input type="password" id="inputProjectLeader" class="form-control" name="pass">
               </div>
               <input name="submit" type="submit" value="Edit" class="btn btn-success float-right">
               </div>
@@ -76,6 +52,7 @@
           </div>
     
           <!-- /.card -->
+
       </form>
     </section>
     <!-- /.content -->

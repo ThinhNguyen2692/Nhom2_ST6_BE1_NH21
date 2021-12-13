@@ -1,4 +1,15 @@
-<?php include "header.php"?>
+<?php include "header.php"; 
+if(isset($_GET['err'])){ 
+  if($_GET['err'] == "false"){ alert("Không thể xóa");
+  }
+  if($_GET['err'] == "true"){ alert("Lỗi");
+  }
+}
+
+function alert($msg) {
+    echo "<script type='text/javascript'>alert('$msg');</script>";
+}
+?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -27,7 +38,7 @@
         <div class="card-header">
           <h3 class="card-title">Projects</h3>
           <br>
-          <a class="btn btn-info btn-sm" href="adduser.php">
+          <a class="btn btn-info btn-sm" href="addManu.php">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Add
@@ -66,12 +77,12 @@
                       </td>
                     
                       <td class="project-actions text-center" >
-                          <a class="btn btn-info btn-sm" href="#">
+                          <a class="btn btn-info btn-sm" href="editmanu.php?id=<?php echo $value['manu_id']?>&name=<?php echo $value['manu_name'] ?>">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="#">
+                          <a class="btn btn-danger btn-sm" href="delmanu.php?id=<?php echo $value['manu_id']?>">
                               <i class="fas fa-trash">
                               </i>
                               Delete
