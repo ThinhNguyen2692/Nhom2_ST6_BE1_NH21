@@ -1,10 +1,6 @@
 <?php
    session_start();
-<<<<<<< HEAD
    if(!isset($_SESSION['idad'])){
-=======
-   if(!isset($_SESSION['id'])){
->>>>>>> ad481a1 (demo14-12)
      header('location:../login/index.php');
    }
     class Db
