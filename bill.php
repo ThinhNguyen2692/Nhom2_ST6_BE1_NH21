@@ -100,19 +100,19 @@ include "cart_header.php";
                     <form id="main-contact-form" class="contact-form row" name="contact-form" method="post" action="?order=ordered">
                         <div class="form-group col-md-6">
                             Full name
-                            <input type="text" name="Name" class="form-control"value="<?php echo $Name; ?>">
+                            <input type="text" name="Name" class="form-control"value="<?php echo $_SESSION['Name']?>">
                         </div>
                         <div class="form-group col-md-6">
                             Email
-                            <input type="email" name="email" class="form-control" value="<?=$email?>">
+                            <input type="email" name="email" class="form-control" value="<?php echo $_SESSION['email']?>">
                         </div>
                         <div class="form-group col-md-12">
                         Phone
-                            <input type="text" name="sodienthoai" class="form-control" value="<?=$sodienthoai?>">
+                            <input type="text" name="sodienthoai" class="form-control" value="<?php echo $_SESSION['sdt']?>">
                         </div>
                         <div class="form-group col-md-12">
                         Address
-                            <textarea name="Diachi" id="address" class="form-control" rows="2" value="<?=$Diachi?>"></textarea>
+                            <textarea name="Diachi" id="address" class="form-control" rows="2"><?php echo $_SESSION['diachi']?></textarea>
                         </div>
                         <style>
                             .btn-default {
