@@ -260,10 +260,19 @@ $getAllprotype = $protype->getAllProtype();
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="protypes.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                Protypes
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="addprotypes.php" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+               Add Protypes
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
