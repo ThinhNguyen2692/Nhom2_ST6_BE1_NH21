@@ -22,9 +22,6 @@ class Protype extends Db {
         $sql = self::$connection->prepare("INSERT 
         INTO `protypes`( `type_id`, `type_name`) 
         VALUES ($type_id,$type_name)");
-        var_dump("INSERT 
-        INTO `protypes`( `type_id`, `type_name`,) 
-        VALUES ($type_id,$type_name)");
         return $sql->execute(); //return an array
     }
     public function updateProtype($type_id,$type_name)
