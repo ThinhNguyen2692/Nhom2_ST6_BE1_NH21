@@ -65,15 +65,9 @@ session_start();
 						<!-- <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li> -->
 					
 						<?php 
-<<<<<<< HEAD
 						if(isset($_SESSION['Name'])){
 							?>
 							Xin chào...<?php echo $_SESSION['Name']?> 
-=======
-						if(isset($_SESSION['sdt'])){
-							?>
-							Xin chào...<?$sdt?> 
->>>>>>> ad481a1 (demo14-12)
 							<li><a href="logout.php"><i class="fa fa-user-o"></i> LogOut</a></li>	
 						<?php
 					}else{
