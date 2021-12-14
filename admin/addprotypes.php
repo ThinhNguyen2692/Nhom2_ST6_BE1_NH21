@@ -23,7 +23,7 @@
     <!-- Main content -->
     <section class="content">
 
-      <form action="add.php" method="post" enctype="multipart/form-data" >
+      <form action="addprotypes.php" method="post" enctype="multipart/form-data" >
         
       <div class="card card-primary">
             <div class="card-header">
@@ -34,39 +34,14 @@
                   <i class="fas fa-minus"></i>
                 </button>
               </div>
-            </div>
-            
-              <div class="form-group">
-                <label for="inputStatus">Manufacture</label>
-                <select class="form-control custom-select" name="manu">
-                  <option selected disabled>Select one</option>
-                     <?php 
-                    foreach ($getAllManu as $value):?> 
-
-                    <option value=<?php echo $value['manu_id']?>> <?php echo $value['manu_name']?> </option>
-                    
-                    <?php
-                    endforeach;
-                  ?>
-                </select>
-              </div>
-              
+            </div>          
               </div>
               <div class="form-group">
-                <label for="inputDescription">ID</label>
-                <textarea id="inputDescription" class="form-control" rows="4" name="desc"></textarea>
+                <label for="inputName">Protypes name</label>
+                <input type="text" id="inputName" class="form-control" name="name">
               </div>
-          
-              <div class="form-group">
-                <label for="inputProjectLeader">Name</label>
-                <input type="text" id="inputProjectLeader" class="form-control" name="price">
-              
-             </div>
     
           <!-- /.card -->
-
-       
-
       <div class="row">
         <div class="col-12">
           <input name="submit" type="submit" value="Create new Porject" class="btn btn-success float-right">
