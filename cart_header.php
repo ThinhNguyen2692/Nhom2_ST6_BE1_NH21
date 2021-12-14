@@ -144,9 +144,9 @@ if (isset($_POST['submitCart'])) {
 						<!-- <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li> -->
 						<!-- <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li> -->
                         <?php 
-						if(isset($_SESSION['sdt'])){
+						if(isset($_SESSION['Name'])){
 							?>
-							Xin chào...<?$sdt?> 
+							Xin chào <?php echo $_SESSION['Name']?>  ||
 							<li><a href="logout.php"><i class="fa fa-user-o"></i> LogOut</a></li>	
 						<?php
 					}else{
