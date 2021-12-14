@@ -16,6 +16,6 @@ if(isset($_POST['submit'])){
     var_dump($_POST);   
     $type_id = $_POST['type_id'];
     $type_name=$_POST['type_name']   
-    $product->addProduct($type_id,$type_name); 
+    $protype->addProtypes($type_id,$type_name); 
     header('location:products.php');
 }
