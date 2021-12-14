@@ -67,7 +67,7 @@ session_start();
 						<?php 
 						if(isset($_SESSION['Name'])){
 							?>
-							Xin chào...<?php echo $_SESSION['Name']?> 
+							Xin chào <?php echo $_SESSION['Name']?>  ||
 							<li><a href="logout.php"><i class="fa fa-user-o"></i> LogOut</a></li>	
 						<?php
 					}else{
