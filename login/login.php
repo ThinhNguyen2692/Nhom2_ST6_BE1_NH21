@@ -13,12 +13,17 @@ if(isset($_POST['submit'])){
         $_SESSION['id'] = $value['role_id'];
         $_SESSION['idkh'] = $value['id'];
         $_SESSION['sdt'] = $sdt;
+<<<<<<< HEAD
         $_SESSION['Name'] = $value['Name'];
         $_SESSION['email'] = $value['email'];
         $_SESSION['diachi'] = $value['Diachi'];
       }
       if($_SESSION['id'] == 0){
         $_SESSION['idad'] = 0;
+=======
+      }
+      if($_SESSION['id'] == 0){
+>>>>>>> ad481a1 (demo14-12)
         header('location:../admin/index.php');
       }else  header('location:../index.php');
     }else{
