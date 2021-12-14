@@ -84,8 +84,9 @@ include "header.php";
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="protype.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="protypes.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
+            
           </div>
           <!-- ./col -->
          
