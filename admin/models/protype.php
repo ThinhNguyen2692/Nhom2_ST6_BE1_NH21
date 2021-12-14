@@ -2,11 +2,7 @@
 class Protype extends Db {
     public function getAllProtype()
     {
-<<<<<<< HEAD
         $sql = self::$connection->prepare("SELECT * FROM protypes");
-=======
-        $sql = self::$connection->prepare("SELECT `type_id`, `type_name` FROM `protypes` WHERE 1");
->>>>>>> ad481a1 (demo14-12)
         $sql->execute(); //return an object
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -21,8 +17,6 @@ class Protype extends Db {
          $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
          return $items; //return an array
     }
-<<<<<<< HEAD
-=======
     public function addProtype($type_id,$type_name)
     {
         $sql = self::$connection->prepare("INSERT 
@@ -49,6 +43,5 @@ class Protype extends Db {
          $sql->bind_param('i',$type_id); //return an objec
          return $sql->execute(); //return an array
     }
->>>>>>> ad481a1 (demo14-12)
 }
 ?>
