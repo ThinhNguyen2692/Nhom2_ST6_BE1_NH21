@@ -151,6 +151,7 @@ $getAllprotype = $protype->getAllProtype();
           <i class="far fa-bell"></i>
           <span class="badge badge-warning navbar-badge">15</span>
         </a>
+        <li><a href="../logout.php"><i class="fa fa-user-o"></i> LogOut</a></li>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <span class="dropdown-item dropdown-header">15 Notifications</span>
           <div class="dropdown-divider"></div>
