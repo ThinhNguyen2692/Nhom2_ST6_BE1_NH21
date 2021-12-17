@@ -23,7 +23,7 @@
     <!-- Main content -->
     <section class="content">
 
-      <form action="addprotypes.php" method="post" enctype="multipart/form-data" >
+      <form action="addprotype.php" method="post" enctype="multipart/form-data" >
         
       <div class="card card-primary">
             <div class="card-header">

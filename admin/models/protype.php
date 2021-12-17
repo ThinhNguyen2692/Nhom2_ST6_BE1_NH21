@@ -17,11 +17,9 @@ class Protype extends Db {
          $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
          return $items; //return an array
     }
-    public function addProtype($type_id,$type_name)
+    public function addProtype($type_name)
     {
-        $sql = self::$connection->prepare("INSERT 
-        INTO `protypes`( `type_id`, `type_name`) 
-        VALUES ($type_id,$type_name)");
+        $sql = self::$connection->prepare("INSERT INTO `protypes`(`type_name`) VALUES ('$type_name')");
         return $sql->execute(); //return an array
     }
     public function updateProtype($type_id,$type_name)

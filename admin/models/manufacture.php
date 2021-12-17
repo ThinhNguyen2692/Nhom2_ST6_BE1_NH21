@@ -20,6 +20,7 @@ class Manufacture extends Db {
          return $items; //return an array
     }
     public function addManu($name){
+        
         $sql = self::$connection->prepare("INSERT INTO `manufactures`(`manu_name`) VALUES ('$name')");
         return $sql->execute(); //return an array
     }
