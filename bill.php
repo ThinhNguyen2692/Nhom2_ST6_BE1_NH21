@@ -1,5 +1,6 @@
 <?php
 include "cart_header.php";
+
 ?>
 
 <body>
@@ -147,10 +148,8 @@ include "cart_header.php";
                                     <a class="btn btn-default update" href="index.php">Continue Buying</a>
                                     <a class="btn btn-default check_out" href="#">Delete All</a>
                                     <!-- btn-primary // viền màu blue-->
-                                    <!-- <a class="btn btn-default pull-right" href="a.html">Order</a> -->
-                                    <input type="submit" name="submit" class="btn pull-right btn-default" value="Order">
-
-
+                                    <a class="btn btn-default pull-right" href="billcomfirm.php">Order</a>
+                                    <!-- <input type="submit" name="submit" class="btn pull-right btn-default" value="Order"> -->
                                 </div>
                             </form>
                 </div>

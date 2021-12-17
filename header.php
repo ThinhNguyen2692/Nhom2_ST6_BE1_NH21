@@ -67,12 +67,14 @@ session_start();
 						<?php 
 						if(isset($_SESSION['Name'])){
 							?>
-							Xin chào <?php echo $_SESSION['Name']?>  ||
+							
+							<li><a href="#"><i></i>Xin chào <?php echo $_SESSION['Name']?></a></li>  ||
 							<li><a href="logout.php"><i class="fa fa-user-o"></i> LogOut</a></li>	
 						<?php
 					}else{
 					?>
 						<li><a href="login/index.php"><i class="fa fa-user-o"></i>LogIn</a></li>
+						<li><a href="admin/pages/examples/index.php"><i class="fa fa-user-o"></i>Registration</a></li>
 									
 						<?php } ?>
 					</ul>
@@ -119,7 +121,7 @@ session_start();
 								<div>
 									<a href="#">
 										<i class="fa fa-heart-o"></i>
-										<span>Your Wishlist</span>
+										<span>Order history</span>
 										<div class="qty">2</div>
 									</a>
 								</div>

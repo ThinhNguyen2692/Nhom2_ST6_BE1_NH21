@@ -146,12 +146,13 @@ if (isset($_POST['submitCart'])) {
                         <?php 
 						if(isset($_SESSION['Name'])){
 							?>
-							Xin chào <?php echo $_SESSION['Name']?>  ||
+								<li><a href="#"><i></i>Xin chào <?php echo $_SESSION['Name']?></a></li>  ||
 							<li><a href="logout.php"><i class="fa fa-user-o"></i> LogOut</a></li>	
 						<?php
 					}else{
 					?>
 						<li><a href="login/index.php"><i class="fa fa-user-o"></i>LogIn</a></li>
+                        <li><a href="admin/pages/examples/index.php"><i class="fa fa-user-o"></i>Registration</a></li>
 									
 						<?php } ?>
                         
