@@ -22,11 +22,9 @@ if(isset($_POST['submit'])){
     $feature = $_POST['feature'];
     $date = $_POST['date'];
     $image = $_FILES['image']['name'];
-    
-    $product->addProduct($name,$manu_id,$type_id,$price,$image,$desc,$feature,$date);
-
     $target_dir = "../img/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+    $product->addProduct($name,$manu_id,$type_id,$price,$image,$desc,$feature,$date);
     header('location:products.php');
 }
