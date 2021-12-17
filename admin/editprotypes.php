@@ -23,7 +23,7 @@
     <!-- Main content -->
     <section class="content">
 
-      <form action="update.php" method="post" enctype="multipart/form-data" >
+      <form action="updateprotyps.php" method="post" enctype="multipart/form-data" >
         
       <div class="card card-primary">
             <div class="card-header">
@@ -40,13 +40,18 @@
 
             
             <div class="form-group">
-                <label for="inputName">Protype Name</label>
-                <input type="text" id="inputName" value="<?php echo $_GET['type_name']?>" class="form-control" name="type_name">
+              <label for="inputName">Protypes id</label>
+              <input  type="text" id="inputName" value="<?php echo $_GET['id']?>" class="form-control" name="id" readonly>
+            </div>
+              <div class="form-group">
+                <label for="inputName">Protypes name</label>
+                <input type="text" id="inputName" value="<?php echo $_GET['name']?>" class="form-control" name="name">
+              </div>
+              <input name="submit" type="submit" value="Edit" class="btn btn-success float-right">
               </div>
              
-              
-           
-                 
+            </div>
+
                 </select>
               </div>
             
@@ -58,11 +63,7 @@
 
        
 
-      <div class="row">
-        <div class="col-12">
-          <input name="submit" type="submit" value="Upate Product" class="btn btn-success float-right">
-        </div>
-      </div>
+      
       </form>
     </section>
     <!-- /.content -->

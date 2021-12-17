@@ -66,11 +66,12 @@
                       </td>
                       
                       <td class="project-actions text-center" >
-                          <a class="btn btn-info btn-sm" href="editprotypes.php?id=<?php echo $value['type_id']?>&type_name=<?php echo $value['type_name']?>">
-                              <i class="fas fa-pencil-alt"></i>
+                      <a class="btn btn-info btn-sm" href="editprotypes.php?id=<?php echo $value['type_id']?>&name=<?php echo $value['type_name'] ?>">
+                              <i class="fas fa-pencil-alt">
+                              </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="del.php?id=<?php echo $value['type_id']?>">
+                          <a class="btn btn-danger btn-sm" href="delprotypes.php?id=<?php echo $value['type_id']?>">
                               <i class="fas fa-trash">
                               </i>
                               Delete

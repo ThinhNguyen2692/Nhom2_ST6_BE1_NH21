@@ -62,6 +62,9 @@ function alert($msg) {
                       <th style="width: 20%">
                         Full Name
                       </th>
+                      <th style="width: 20%" class="text-center">
+                       Action
+                      </th>
                   </tr>
               </thead>
               <tbody>

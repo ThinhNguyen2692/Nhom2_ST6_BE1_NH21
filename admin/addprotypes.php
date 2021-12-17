@@ -38,7 +38,7 @@
               </div>
               <div class="form-group">
                 <label for="inputName">Protypes name</label>
-                <input type="text" id="inputName" class="form-control" name="name">
+                <input type="text" type_id="inputName" class="form-control" name="name">
               </div>
     
           <!-- /.card -->
