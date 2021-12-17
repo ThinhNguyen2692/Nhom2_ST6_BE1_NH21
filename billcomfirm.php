@@ -8,6 +8,7 @@ require "models/protype.php";
 $protype = new Protype;
 //var_dump($getAllProducts);
 session_start();
+
 ?>
 
 
@@ -69,12 +70,13 @@ session_start();
                     <?php
                     if (isset($_SESSION['Name'])) {
                     ?>
-                        Xin chào <?php echo $_SESSION['Name'] ?> ||
-                        <li><a href="logout.php"><i class="fa fa-user-o"></i> LogOut</a></li>
+                      	<li><a href="#"><i></i>Xin chào <?php echo $_SESSION['Name']?></a></li>  ||
+							<li><a href="logout.php"><i class="fa fa-user-o"></i> LogOut</a></li>	
                     <?php
                     } else {
                     ?>
                         <li><a href="login/index.php"><i class="fa fa-user-o"></i>LogIn</a></li>
+                        <li><a href="admin/pages/examples/index.php"><i class="fa fa-user-o"></i>Registration</a></li>
 
                     <?php } ?>
                 </ul>
@@ -126,6 +128,7 @@ session_start();
                     <li class="active"><a href="#">Hỏi đáp</a></li>
                 </ul>
                 <!-- /NAV -->
+             
                 <table class="table table-condensed " style="width:100%">
                   <!-- Cảm ơn -->
                     <tr>
@@ -152,12 +155,14 @@ session_start();
                         <!-- Thông tin người đặc -->
                         <tr>
                         <td>
-                            <h3><b>Thông tin người đặc</b></h3>
+                            <h3><b>Thông tin người đặt hàng</b></h3>
                         </td>
                     </tr>
                     <tr>
                         <td class="cart_menu">
-                        Tên <br> Địa chỉ <br> Số điện thoại
+                        Tên khách hàng: <?php echo $_SESSION['Name']?>
+                         <br> Địa chỉ nhận hàng: <?php echo $_SESSION['diachi'] ?>
+                         <br> Số điện thoại: <?php echo $_SESSION['sdt'] ?>
                      
                         </td>
                     <tr>
