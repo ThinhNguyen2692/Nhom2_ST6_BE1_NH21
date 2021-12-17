@@ -10,8 +10,6 @@ $Manufacture = new Manufacture();
 $getAllManu = $Manufacture->getAllManu();
 $getAllprotype = $protype->getAllProtype();
 
-
-
 if(isset($_POST['submit'])){
     var_dump($_POST);
     $name = $_POST['name'];
