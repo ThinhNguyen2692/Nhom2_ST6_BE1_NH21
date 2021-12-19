@@ -51,9 +51,7 @@ class Product extends Db
     public function search($keyword)
     {
         $sql = self::$connection->prepare("SELECT * FROM products 
-        WHERE `name` LIKE ?");
-        $keyword = "%$keyword%";
-        $sql->bind_param("s", $keyword);
+        WHERE `name` LIKE '%$keyword%' ");
         $sql->execute(); //return an object
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
