@@ -115,6 +115,6 @@ class Product extends Db
         return $items; //return an array
     
     }
-    
+  
 
 }
