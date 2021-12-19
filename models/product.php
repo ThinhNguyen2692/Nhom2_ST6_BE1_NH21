@@ -31,7 +31,7 @@ class Product extends Db
 
     public function getSanPhamMoi()
     {
-        $sql = self::$connection->prepare("SELECT * FROM `products` WHERE `products`.`created_at` < NOW() ORDER BY ABS(DATEDIFF(`products`.`created_at`, NOW())) ASC LIMIT 10");
+        $sql = self::$connection->prepare("SELECT * FROM `products` WHERE `products`.`created_at` < NOW() ORDER BY ABS(DATEDIFF(`products`.`created_at`, NOW())) DESC LIMIT 10");
         $sql->execute(); //return an object
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);

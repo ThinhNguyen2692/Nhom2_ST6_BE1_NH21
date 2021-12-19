@@ -238,17 +238,10 @@
 						<!-- store products -->
 						<div class="row">
 							<?php							
-								if(isset($_GET['keyword'])):	
-													
-									$keyword = $_GET['keyword'];	
-									
-									$search = $product->search($keyword);
-
-									
-									
-										foreach($search as $value):
-										
-										
+								if(isset($_GET['keyword'])):														
+									$keyword = $_GET['keyword'];										
+									$search = $product->search($keyword);			
+										foreach($search as $value):																			
 								?>
 
 								<!-- product -->

@@ -223,10 +223,7 @@ include "header.php";
 									<div class="product">
 										<div class="product-img">
 											<img src="./img/<?php echo $value['image'] ?>" alt="">
-											<div class="product-label">
-												<span class="sale">-30%</span>
-												<span class="new">NEW</span>
-											</div>
+										
 										</div>
 										<div class="product-body">
 											<p class="product-category">Category</p>
