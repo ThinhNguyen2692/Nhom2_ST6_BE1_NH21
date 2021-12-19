@@ -201,8 +201,8 @@ session_start();
                         <tbody>
                             <?php
                             $total = 0;
-                            if (isset($_SESSION['cart'])) {
-                                foreach ($_SESSION['cart'] as $value) {
+                            if (isset($_SESSION['cart2'])) {
+                                foreach ($_SESSION['cart2'] as $value) {
                                     $total += $value['price'];
                             ?>
                                     <tr>
