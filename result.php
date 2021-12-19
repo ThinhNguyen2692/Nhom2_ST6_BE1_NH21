@@ -239,22 +239,15 @@
 						<div class="row">
 							<?php							
 								if(isset($_GET['keyword'])):	
-									if(isset($_GET['searchCol'])):						
+													
 									$keyword = $_GET['keyword'];	
-									$searchCol = $_GET['searchCol'];		
+									
 									$search = $product->search($keyword);
 
-										$perPage = 3; 				
-										// Lấy số trang trên thanh địa chỉ
-										$page = isset($_GET['page'])?$_GET['page']:1; 			
-										// Tính tổng số dòng
-										$total = count($search); 					
-										// lấy đường dẫn đến file hiện hành
-										$url = $_SERVER['PHP_SELF']."?searchCol=".$searchCol. "&keyword=". $keyword;
-										$get3ProductsByType = $product -> get3ProductsByType($search, $page, $perPage);
 									
-										foreach($get3ProductsByType as $value):
-											if($searchCol == $value['type_id'] || $searchCol == 0):
+									
+										foreach($search as $value):
+										
 										
 								?>
 
@@ -293,7 +286,7 @@
 							<!-- /product -->
 
 							<?php 
-						 endif;
+						
 						endforeach;
 					
 					 ?>
@@ -309,7 +302,7 @@
 							</ul>
 						</div>
 						<!-- /store bottom filter -->
-						<?php endif;endif?>
+						<?php endif;?>
 					</div>
 						<!-- /store bottom filter -->
 						<?php  ?>
