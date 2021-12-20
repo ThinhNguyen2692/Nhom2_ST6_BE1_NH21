@@ -22,5 +22,14 @@
             $sql = self::$connection->prepare("DELETE FROM `user` WHERE `user`.`id` = '$id'");
             return $sql->execute(); 
         }
+        public function getAllDemUser()
+        {
+            $sql = self::$connection->prepare("SELECT count(id)
+            FROM user ");
+             $sql->execute(); //return an object
+             $items = array();
+             $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+             return $items; //return an array
+        }
     }
 ?>

@@ -11,7 +11,6 @@ $getAllManu = $Manufacture->getAllManu();
 $getAllprotype = $protype->getAllProtype();
 
 if(isset($_POST['submit'])){
-    var_dump($_POST);
     $name = $_POST['name'];
     $manu_id = $_POST['manu'];
     $type_id = $_POST['type'];
@@ -22,7 +21,14 @@ if(isset($_POST['submit'])){
     $image = $_FILES['image']['name'];
     $target_dir = "../img/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
-    move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
-    $product->addProduct($name,$manu_id,$type_id,$price,$image,$desc,$feature,$date);
-    header('location:products.php');
+  
+    $check = getimagesize($_FILES["image"]["tmp_name"]);
+    if($check !== false) {
+          move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+          $product->addProduct($name,$manu_id,$type_id,$price,$image,$desc,$feature,$date);
+          header('location:products.php');
+      } else {
+        header('location:addproduct.php?err=true');
+      }
+  
 }

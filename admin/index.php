@@ -45,6 +45,24 @@ include "header.php";
               </div>
               <a href="products.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
+
+            <div class="small-box bg-red">
+              <div class="inner">
+               <?php 
+               $getSoBill = $bill->getAllDemBill(); 
+               foreach ($getSoBill as $value) {
+                 $temp = $value['count(id)'];
+               }
+               ?>
+                <h3><?php echo $temp?></h3>
+                <p>Bill</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="bill.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+
           </div>
           <!-- ./col -->
           <div class="col-lg-3 col-6">
@@ -82,10 +100,32 @@ include "header.php";
                 <p>Protype</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="ion ion-stats-bars"></i>
               </div>
               <a href="protypes.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
+            
+            
+          </div>
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-white">
+              <div class="inner">
+              <?php 
+               $getSoUser = $user->getAllDemUser(); 
+               foreach ($getSoUser as $value) {
+                 $temp = $value['count(id)'];
+               }
+               ?>
+                <h3><?php echo $temp?></h3>
+                <p>User</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="users.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+            
             
           </div>
           <!-- ./col -->
