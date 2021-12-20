@@ -249,7 +249,7 @@
 						$total = count($search);
 						// lấy đường dẫn đến file hiện hành
 						$url = $_SERVER['PHP_SELF'] . "?keyword=" . $keyword;
-						$search = $product->get3ProductsByType($keyword, $page, $perPage);
+						$search = $product->search3($keyword, $page, $perPage);
 						if(count($search) == 0){
 							echo "không tìm thấy sản phẩm";
 						}else

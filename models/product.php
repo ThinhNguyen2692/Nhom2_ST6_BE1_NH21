@@ -57,7 +57,20 @@ class Product extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
-   
+    public function search3($keyword, $page, $perPage)
+    {
+        // Tính số thứ tự trang bắt đầu
+        $firstLink = ($page - 1) * $perPage;
+        $sql = self::$connection->prepare("SELECT * FROM `products`
+        WHERE `name` LIKE ? LIMIT ?, ?");
+        $keyword="%$keyword%";
+        $sql->bind_param("sss", $keyword, $firstLink, $perPage);
+        $sql->execute(); //return an object
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+  
     public function getProductsByType($type_id)
     {
         $sql = self::$connection->prepare("SELECT * FROM products WHERE type_id = ?");
@@ -80,6 +93,7 @@ class Product extends Db
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
+    
     
 
     function paginate($url, $total, $perPage,$page)
