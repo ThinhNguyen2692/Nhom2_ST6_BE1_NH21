@@ -110,9 +110,8 @@ class Product extends Db
      	}
      	return $link;
     }
-    public function getChitietsp()
+    public function getChitietsp($id)
     {
-        $id=$_GET["id"];
         $sql = self::$connection->prepare("SELECT * FROM products WHERE id ='$id'");
         $sql->execute(); //return an object
         $items = array();
@@ -120,9 +119,9 @@ class Product extends Db
         return $items; //return an array
     
     }
-    public function getSanphamphukien()
+    public function getSanPhamLienQuan($manu_id)
     {
-        $sql = self::$connection->prepare("SELECT * FROM products WHERE type_id=5");
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE manu_id = '$manu_id' LIMIT 0,4");
         $sql->execute(); //return an object
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);

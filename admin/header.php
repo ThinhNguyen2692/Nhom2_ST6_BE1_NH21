@@ -2,16 +2,18 @@
 require "config.php";
 require "models/db.php";
 require "models/product.php";
-$product = new Product();
 require "models/protype.php";
 require "models/manufacture.php";
 require "models/user.php";
+require "models/bill.php";
+$bill = new Bill;
+$product = new Product();
 $user = new user;
 $protype = new ProType();
 $Manufacture = new Manufacture();
 $getAllManu = $Manufacture->getAllManu();
 $getAllprotype = $protype->getAllProtype();
-
+$getAllBill = $bill ->getAllBill();
 
 ?>
 <!DOCTYPE html>
@@ -287,6 +289,16 @@ $getAllprotype = $protype->getAllProtype();
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="bill.php" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+               bill
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+
 
         </ul>
       </nav>

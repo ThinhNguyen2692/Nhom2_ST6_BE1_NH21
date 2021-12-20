@@ -6,7 +6,6 @@ $product = new Product;
 $getAllProducts = $product->getAllProducts();
 require "models/protype.php";
 $protype = new Protype;
-//var_dump($getAllProducts);
 session_start();
 ?>
 
