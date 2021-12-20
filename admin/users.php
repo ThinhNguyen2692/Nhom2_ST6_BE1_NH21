@@ -112,11 +112,18 @@ function alert($msg) {
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="#">
+                          <?php 
+                            if($value['role_id'] == 0){?>
+                             <a class="btn btn-danger btn-sm" href="delUser.php?id=<?php echo $value['id']?>">
                               <i class="fas fa-trash">
                               </i>
                               Delete
                           </a>
+                            
+                            <?php
+                              
+                            }
+                          ?>
                       </td>
                   </tr>
                   <?php endforeach; ?>

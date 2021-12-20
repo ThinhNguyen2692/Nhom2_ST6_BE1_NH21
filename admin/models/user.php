@@ -18,5 +18,9 @@
             $sql = self::$connection->prepare("UPDATE `user` SET`Name`='$name',`Diachi`='$diachi',`email`='$email',`sodienthoai`='$sdt',`role_id`='$role_id',`password`='$pass' WHERE `id` = '$id'");
             return $sql->execute(); //return an array
         }
+        public function delUser($id){
+            $sql = self::$connection->prepare("DELETE FROM `user` WHERE `user`.`id` = '$id'");
+            return $sql->execute(); 
+        }
     }
 ?>
