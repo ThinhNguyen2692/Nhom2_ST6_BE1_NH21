@@ -28,5 +28,13 @@
             $sql = self::$connection->prepare("INSERT INTO `user`(`Name`, `Diachi`, `email`, `sodienthoai`, `role_id`, `password`) VALUES ('$name','$diachi','$email','$sdt','$role_id','$pass')");
             return $sql->execute(); //return an array
         }
+        public function updateUser($id,$name,$diachi,$email,$sdt){
+            $sql = self::$connection->prepare("UPDATE `user` SET`Name`='$name',`Diachi`='$diachi',`email`='$email',`sodienthoai`='$sdt' WHERE `id` = '$id'");
+            return $sql->execute(); //return an array
+        }
+        public function updatePass($id,$pass){
+            $sql = self::$connection->prepare("UPDATE `user` SET`password`='$pass' WHERE `id` = '$id'");
+            return $sql->execute(); //return an array
+        }
     }
 ?>
