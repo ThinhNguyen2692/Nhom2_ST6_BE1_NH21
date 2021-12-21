@@ -61,16 +61,48 @@ session_start();
 					<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
 				</ul>
 
-				<ul class="header-links pull-right">
-					<!-- <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li> -->
-					<!-- <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li> -->
-
+				<ul id="nav" class="header-links pull-right">
+					<style>
+						#nav li a {
+							text-decoration: none;
+						
+							display: block;
+						}
+						#nav>li:hover>a, #nav .subnav li:hover a {
+							color: red;												
+						}
+						#nav li:hover .subnav {
+							display: block;
+						}
+						#nav .subnav {
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: 0;
+							background-color: gray;
+							box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+						}
+						#nav .subnav li a {
+							color: black;
+							padding: 0px 12px;				
+						}
+						#nav li {
+							position: relative;
+						}						
+					</style>
 					<?php
 					if (isset($_SESSION['Name'])) {
 					?>
 
-						<li><a href="#"><i></i>Xin chào <?php echo $_SESSION['Name'] ?></a></li> ||
+						<li><a href="#"><i></i>Xin chào <?php echo $_SESSION['Name'] ?></a>
+							<ul class="subnav">
+								<li><a href="updateUser.php">User</a></li>
+								<li><a href="updatePassWord.php">Change Password</a></li>
+								
+							</ul>
+						</li> ||
 						<li><a href="logout.php"><i class="fa fa-user-o"></i> LogOut</a></li>
+
 					<?php
 					} else {
 					?>
@@ -121,21 +153,21 @@ session_start();
 
 							<!-- Cart -->
 							<div>
-									<a href="order_history.php">
-										<i class="fa fa-heart-o"></i>
-										<span>Order history</span>
-										<div class="qty">2</div>
-									</a>
-								</div>
+								<a href="order_history.php">
+									<i class="fa fa-heart-o"></i>
+									<span>Order history</span>
+									<!-- <div class="qty">0</div> -->
+								</a>
+							</div>
 							<div class="dropdown">
 								<!-- data-toggle="dropdown" -->
 								<a href="cart.php" class="dropdown-toggle" aria-expanded="true">
 									<i class="fa fa-shopping-cart"></i>
 									<span>Your Cart</span>
-									<div class="qty">x</div>
+									<div class="qty">0</div>
 								</a>
 								<!-- Wishlist -->
-							
+
 								<!-- /Wishlist -->
 
 
