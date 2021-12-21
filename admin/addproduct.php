@@ -55,7 +55,6 @@ function alert($msg) {
               <div class="form-group">
                 <label for="inputStatus">Manufacture</label>
                 <select class="form-control custom-select" name="manu">
-                  <option selected disabled>Select one</option>
                      <?php 
                     foreach ($getAllManu as $value):?> 
 
@@ -96,7 +95,6 @@ function alert($msg) {
             <div class="form-group">
                 <label for="inputStatus">Feature</label>
                 <select id="inputStatus" class="form-control custom-select" name="feature">
-                  <option selected disabled>Select one</option>
                   <option>0</option>
                   <option>1</option>
                 </select>
