@@ -31,6 +31,7 @@ session_start();
 	<link type="text/css" rel="stylesheet" href="css/slick.css" />
 	<link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
 
+	
 	<!-- nouislider -->
 	<link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
 
@@ -62,18 +63,23 @@ session_start();
 				</ul>
 
 				<ul id="nav" class="header-links pull-right">
+					<!-- CSS User and change password -->
 					<style>
 						#nav li a {
 							text-decoration: none;
-						
+
 							display: block;
 						}
-						#nav>li:hover>a, #nav .subnav li:hover a {
-							color: red;												
+
+						#nav>li:hover>a,
+						#nav .subnav li:hover a {
+							color: red;
 						}
+
 						#nav li:hover .subnav {
 							display: block;
 						}
+
 						#nav .subnav {
 							display: none;
 							position: absolute;
@@ -82,26 +88,33 @@ session_start();
 							background-color: gray;
 							box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 						}
+
 						#nav .subnav li a {
 							color: black;
-							padding: 0px 12px;				
+							padding: 0 12px;
 						}
+
 						#nav li {
 							position: relative;
-						}						
+						}
+
+						.user {
+							color: #fff;
+							text-transform: uppercase;
+						}
 					</style>
 					<?php
 					if (isset($_SESSION['Name'])) {
 					?>
 
-						<li><a href="#"><i></i>Xin chào <?php echo $_SESSION['Name'] ?></a>
+						<li><a class="user" href="#"><i class="fa fa-user-o"></i>Hello <?php echo $_SESSION['Name'] ?></a>
 							<ul class="subnav">
 								<li><a href="updateUser.php">User</a></li>
 								<li><a href="updatePassWord.php">Change Password</a></li>
-								
+
 							</ul>
 						</li> ||
-						<li><a href="logout.php"><i class="fa fa-user-o"></i> LogOut</a></li>
+						<li><a href="logout.php"> --> LogOut</a></li>
 
 					<?php
 					} else {
@@ -154,7 +167,12 @@ session_start();
 							<!-- Cart -->
 							<div>
 								<a href="order_history.php">
-									<i class="fa fa-heart-o"></i>
+									<!-- <i class="fa fa-heart-o"></i> -->
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+  <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+</svg>
+									
+									<br>
 									<span>Order history</span>
 									<!-- <div class="qty">0</div> -->
 								</a>
