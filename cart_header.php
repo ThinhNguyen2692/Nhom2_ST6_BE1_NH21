@@ -1,4 +1,5 @@
 <?php
+
 require "config.php";
 require "models/db.php";
 require "models/product.php";
@@ -132,34 +133,80 @@ if (isset($_POST['submitCart'])) {
 <body>
     <!-- HEADER -->
     <header>
-        <!-- TOP HEADER -->
-        <div id="top-header">
-            <div class="container">
-                <ul class="header-links pull-left">
-                    <li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-                    <li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-                    <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
-                </ul>
-                <ul class="header-links pull-right">
-						<!-- <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li> -->
-						<!-- <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li> -->
-                        <?php 
-						if(isset($_SESSION['Name'])){
-							?>
-								<li><a href="#"><i></i>Xin chào <?php echo $_SESSION['Name']?></a></li>  ||
-							<li><a href="logout.php"><i class="fa fa-user-o"></i> LogOut</a></li>	
-						<?php
-					}else{
+      	<!-- TOP HEADER -->
+		<div id="top-header">
+			<div class="container">
+				<ul class="header-links pull-left">
+					<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
+					<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
+					<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
+				</ul>
+
+				<ul id="nav" class="header-links pull-right">
+					<!-- CSS User and change password -->
+					<style>
+						#nav li a {
+							text-decoration: none;
+
+							display: block;
+						}
+
+						#nav>li:hover>a,
+						#nav .subnav li:hover a {
+							color: red;
+						}
+
+						#nav li:hover .subnav {
+							display: block;
+						}
+
+						#nav .subnav {
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: 0;
+							background-color: gray;
+							box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+						}
+
+						#nav .subnav li a {
+							color: black;
+							padding: 0 12px;
+						}
+
+						#nav li {
+							position: relative;
+						}
+
+						.user {
+							color: #fff;
+							text-transform: uppercase;
+						}
+					</style>
+					<?php
+					if (isset($_SESSION['Name'])) {
 					?>
-						<li><a href="login/index.php"><i class="fa fa-user-o"></i>LogIn</a></li>
-                        <li><a href="admin/pages/examples/index.php"><i class="fa fa-user-o"></i>Registration</a></li>
-									
-						<?php } ?>
-                        
-					</ul>
-            </div>
-        </div>
-        <!-- /TOP HEADER -->
+
+						<li><a class="user" href="#"><i class="fa fa-user-o"></i>Hello <?php echo $_SESSION['Name'] ?></a>
+							<ul class="subnav">
+								<li><a href="updateUser.php">User</a></li>
+								<li><a href="updatePassWord.php">Change Password</a></li>
+
+							</ul>
+						</li> ||
+						<li><a href="logout.php"> --> LogOut</a></li>
+
+					<?php
+					} else {
+					?>
+						<li><a href="login/index.php"><i class="fa fa-user-o"></i>LOGIN</a></li>
+						<li><a href="admin/pages/examples/index.php"><i class="fa fa-user-o"></i>REGISTRATION</a></li>
+
+					<?php } ?>
+				</ul>
+			</div>
+		</div>
+		<!-- /TOP HEADER -->
 
         <div class="font">SHOPPING CART</div>
 

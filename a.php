@@ -23,3 +23,24 @@
    
 </body>
 </html>
+<?php
+//7h 30m 02s 18-05-2016
+ 
+$time = mktime(7,30,2,5,18,2016);
+ 
+//$time là timestamp, sử dụng nó trong hàm date()
+ 
+echo date("Y-m-d H:i:s",$time),'<br>';
+ 
+//công thêm 5 phút
+ 
+$time += 5*60;
+ 
+echo '5 min after: ',date("Y-m-d H:i:s",$time),'<br>';
+ 
+// và công thêm 1 ngày
+ 
+echo ' 1 date after: ',date("Y-m-d H:i:s",($time+1*60*60*24));
+ 
+
+?>
