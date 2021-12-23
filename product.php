@@ -1,38 +1,11 @@
 <?php
 include "header.php";
 ?>
-<<<<<<< HEAD
-<?php include "header.php"; ?>
-
-<body>
-
-	<!-- HEADER -->
-
-	<!-- /HEADER -->
-
-	<!-- NAVIGATION -->
-
-	<!-- /NAVIGATION -->
-
-	<!-- BREADCRUMB -->
-	
-	<!-- /BREADCRUMB -->
-
-	<!-- SECTION -->
-	<div class="section">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<?php
-			$getChitietsp = $product->getChitietsp();
-			foreach ($getChitietsp as $value) : ?>
-=======
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
->>>>>>> 226a8895c2d99b88a70c80c5279277012ca83b16
 				<div class="row">
 					<?php
 						$getChiTietSP = $product->getChitietsp($_GET['id']);
