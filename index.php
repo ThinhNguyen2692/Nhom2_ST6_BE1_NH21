@@ -223,14 +223,11 @@ include "header.php";
 									<div class="product">
 										<div class="product-img">
 											<img src="./img/<?php echo $value['image'] ?>" alt="">
-											<div class="product-label">
-												<span class="sale">-30%</span>
-												<span class="new">NEW</span>
-											</div>
+										
 										</div>
 										<div class="product-body">
 											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
+											<h3 class="product-name"><a href="product.php?id=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></h3>
 											<h4 class="product-price"><?php echo number_format($value['price']) ?> VND </del></h4>
 											<div class="product-rating">
 												<i class="fa fa-star"></i>
@@ -248,7 +245,7 @@ include "header.php";
 										<div class="add-to-cart">
 											<a href="cart.php?id=<?php echo $value['id'] ?>">
 												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-												< </a>
+												 </a>
 										</div>
 									</div>
 									<!-- /product -->
@@ -298,7 +295,7 @@ include "header.php";
 
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
+										<h3 class="product-name"><a href="product.php?id=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></h3>
 										<h4 class="product-price"><?php echo number_format($value['price']) ?></h4>
 									</div>
 								</div>
@@ -331,7 +328,7 @@ include "header.php";
 
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
+										<h3 class="product-name"><a href="product.php?id=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></h3>
 										<h4 class="product-price"><?php echo number_format($value['price']) ?></h4>
 									</div>
 								</div>
@@ -371,7 +368,7 @@ include "header.php";
 
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
+										<h3 class="product-name"><a href="product.php?id=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></h3>
 										<h4 class="product-price"><?php echo number_format($value['price']) ?></h4>
 									</div>
 								</div>

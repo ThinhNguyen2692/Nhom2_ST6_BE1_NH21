@@ -18,5 +18,18 @@
             $sql = self::$connection->prepare("UPDATE `user` SET`Name`='$name',`Diachi`='$diachi',`email`='$email',`sodienthoai`='$sdt',`role_id`='$role_id',`password`='$pass' WHERE `id` = '$id'");
             return $sql->execute(); //return an array
         }
+        public function delUser($id){
+            $sql = self::$connection->prepare("DELETE FROM `user` WHERE `user`.`id` = '$id'");
+            return $sql->execute(); 
+        }
+        public function getAllDemUser()
+        {
+            $sql = self::$connection->prepare("SELECT count(id)
+            FROM user ");
+             $sql->execute(); //return an object
+             $items = array();
+             $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+             return $items; //return an array
+        }
     }
 ?>

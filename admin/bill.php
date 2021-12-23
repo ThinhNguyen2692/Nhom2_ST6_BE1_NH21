@@ -1,15 +1,4 @@
-<?php include "header.php"; 
-if(isset($_GET['err'])){ 
-  if($_GET['err'] == "false"){ alert("Không thể xóa");
-  }
-  if($_GET['err'] == "true"){ alert("Lỗi");
-  }
-}
-
-function alert($msg) {
-    echo "<script type='text/javascript'>alert('$msg');</script>";
-}
-?>
+<?php include "header.php"?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -18,12 +7,12 @@ function alert($msg) {
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Manufactures</h1>
+            <h1>Projects</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Manufactures</li>
+              <li class="breadcrumb-item active">Bill</li>
             </ol>
           </div>
         </div>
@@ -36,13 +25,8 @@ function alert($msg) {
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Manufactures</h3>
-          <br>
-          <a class="btn btn-info btn-sm" href="addManu.php">
-                              <i class="fas fa-pencil-alt">
-                              </i>
-                              Add
-                          </a>
+          <h3 class="card-title">Bill</h3>
+
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
               <i class="fas fa-minus"></i>
@@ -60,36 +44,39 @@ function alert($msg) {
                           ID
                       </th>
                       <th style="width: 20%">
-                        Full Name
+                         Name
                       </th>
-                      <th style="width: 20%" class="text-center">
-                       Action
+                      <th style="width: 20%">
+                          Image
+                      </th>
+                      <th style="width: 20%">
+                      Name Products
+                      </th>
+                      <th style="width: 20%">
+                      Total
                       </th>
                   </tr>
               </thead>
               <tbody>
                  
                   <?php 
-                  foreach($getAllManu as $value):?>
+                   
+                  foreach($getAllBill as $value):?>
                   <tr>
                       <td>
-                          <?php echo $value['manu_id'] ?>
+                          <?php echo $value['id'] ?>
                       </td>
                       <td>
-                      <?php echo $value['manu_name'] ?>
+                      <?php echo $value['Name'] ?>
                       </td>
-                    
-                      <td class="project-actions text-center" >
-                          <a class="btn btn-info btn-sm" href="editmanu.php?id=<?php echo $value['manu_id']?>&name=<?php echo $value['manu_name'] ?>">
-                              <i class="fas fa-pencil-alt">
-                              </i>
-                              Edit
-                          </a>
-                          <a class="btn btn-danger btn-sm" href="delmanu.php?id=<?php echo $value['manu_id']?>">
-                              <i class="fas fa-trash">
-                              </i>
-                              Delete
-                          </a>
+                      <td>
+                        <img style="width:50px" src="../img/<?php echo $value['image'] ?>" alt="">
+                        </td>
+                        <td>
+                      <?php echo $value['name'] ?>
+                      </td>
+                      <td>
+                      <?php echo $value['total'] ?>
                       </td>
                   </tr>
                   <?php endforeach; ?>

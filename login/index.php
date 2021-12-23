@@ -44,9 +44,8 @@
 						</div>
 						<input type="password" class="form-control" placeholder="password" name="password">
 					</div>
-					<div class="row align-items-center remember">
-						<input type="checkbox">Remember Me
-					</div>
+					
+					
 					<div class="form-group">
 						<input name="submit" type="submit" value="Login" class="btn float-right login_btn">
 					</div>
@@ -54,11 +53,10 @@
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					Don't have an account?<a href="#">Sign Up</a>
+					Don't have an account?<a href="../admin/pages/examples/index.php">Sign Up</a>
 				</div>
-				<div class="d-flex justify-content-center">
-					<a href="#">Forgot your password?</a>
-				</div>
+				
+				
 			</div>
 		</div>
 	</div>

@@ -1,26 +1,6 @@
 <?php include "header.php"; ?>
 
-		<!-- BREADCRUMB -->
-		<div id="breadcrumb" class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<div class="col-md-12">
-						<ul class="breadcrumb-tree">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">All Categories</a></li>
-							<li><a href="#">Accessories</a></li>
-							<li class="active">Headphones (227,490 Results)</li>
-						</ul>
-					</div>
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /BREADCRUMB -->
-
+	
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
@@ -261,14 +241,11 @@
 								<div class="product">
 									<div class="product-img">
 										<img src="./img/<?php echo $value['image'] ?>" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">NEW</span>
-										</div>
+										
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
+										<h3 class="product-name"><a href="product.php?id=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></h3>
 										<h4 class="product-price"><?php echo number_format($value['price'])?> VND</del></h4>
 										<div class="product-rating">
 											<i class="fa fa-star"></i>
@@ -284,7 +261,9 @@
 										</div>
 									</div>
 									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+									<a href="cart.php?id=<?php echo $value['id'] ?>">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												 </a>
 									</div>
 								</div>
 							</div>
