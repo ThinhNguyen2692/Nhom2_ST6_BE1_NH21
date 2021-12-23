@@ -59,7 +59,7 @@
                         Protype
                       </th>
                       <th style="width: 20%" class="text-center">
-                       action
+                       Action
                       </th>
                   </tr>
               </thead>

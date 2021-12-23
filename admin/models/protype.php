@@ -32,7 +32,7 @@ class Protype extends Db {
             return $sql->execute(); //return an array
        }
     }
-    public function checkProtype($id){
+    public function checkProtype($type_id){
         $sql = self::$connection->prepare("SELECT * FROM `products` WHERE `products`.`type_id` = '$type_id'");
             $sql->execute(); //return an object
             $items = array();

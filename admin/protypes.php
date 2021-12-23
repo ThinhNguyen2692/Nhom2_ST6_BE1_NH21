@@ -1,4 +1,15 @@
-<?php include "header.php"?>
+<?php include "header.php";
+if(isset($_GET['err'])){ 
+  if($_GET['err'] == "false"){ alert("Không thể xóa");
+  }
+  if($_GET['err'] == "true"){ alert("Lỗi");
+  }
+}
+
+function alert($msg) {
+    echo "<script type='text/javascript'>alert('$msg');</script>";
+}
+?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
