@@ -182,7 +182,7 @@ session_start();
 								<a href="cart.php" class="dropdown-toggle" aria-expanded="true">
 									<i class="fa fa-shopping-cart"></i>
 									<span>Your Cart</span>
-									<div class="qty">0</div>
+									
 								</a>
 								<!-- Wishlist -->
 
