@@ -9,7 +9,6 @@ $protype = new ProType();
 $Manufacture = new Manufacture();
 $getAllManu = $Manufacture->getAllManu();
 $getAllprotype = $protype->getAllProtype();
-
 if(isset($_POST['submit'])){
     $name = $_POST['name'];
     $manu_id = $_POST['manu'];
