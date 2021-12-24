@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Number phone" name="diachi">
+          <input type="text" class="form-control" placeholder="Address" name="diachi">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
