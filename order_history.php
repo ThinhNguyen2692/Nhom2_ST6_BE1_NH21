@@ -170,7 +170,7 @@ if (isset($_SESSION['Name'])) {
                 <div id="responsive-nav">
                     <!-- NAV -->
                     <ul class="main-nav nav navbar-nav">
-                        <li class="active"><a href="index.php">Trang chủ</a></li>
+                        <li class="active"><a href="index.php">Home</a></li>
                     </ul>
                     <!-- /NAV -->
 
@@ -179,14 +179,14 @@ if (isset($_SESSION['Name'])) {
                         <!-- Thông tin người đặc -->
                         <tr>
                             <td>
-                                <h3><b>Thông tin người đặt hàng</b></h3>
+                                <h3><b>User information</b></h3>
                             </td>
                         </tr>
                         <tr>
                             <td class="cart_menu">
-                                Tên khách hàng: <?php echo $_SESSION['Name'] ?>
-                                <br> Địa chỉ nhận hàng: <?php echo $_SESSION['diachi'] ?>
-                                <br> Số điện thoại: <?php echo $_SESSION['sdt'] ?>
+                                Name: <?php echo $_SESSION['Name'] ?>
+                                <br> Address: <?php echo $_SESSION['diachi'] ?>
+                                <br> Phone: <?php echo $_SESSION['sdt'] ?>
 
                             </td>
                         <tr>
@@ -209,7 +209,7 @@ if (isset($_SESSION['Name'])) {
         <section>
             <section id="cart_items">
                 <div class="container">
-                    <H3><b>Thông tin giỏ hàng</b></H3>
+                    <H3><b>History</b></H3>
                     <div class="table-responsive cart_info">
                         <table style="width:100%" class="table table-condensed">
                             <thead>

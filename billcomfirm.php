@@ -121,11 +121,8 @@ session_start();
             <div id="responsive-nav">
                 <!-- NAV -->
                 <ul class="main-nav nav navbar-nav">
-                    <li class="active"><a href="index.php">Trang chủ</a></li>
-                    <li class="active"><a href="#">Giới thiệu</a></li>
-                    <li class="active"><a href="#">Liên hệ</a></li>
-                    <li class="active"><a href="#">Góp ý</a></li>
-                    <li class="active"><a href="#">Hỏi đáp</a></li>
+                    <li class="active"><a href="index.php">Home</a></li>
+                   
                 </ul>
                 <!-- /NAV -->
              
@@ -133,36 +130,27 @@ session_start();
                   <!-- Cảm ơn -->
                     <tr>
                         <td>
-                            <h3><b>Cảm ơn</b></h3>
+                            <h3><b>Thank You</b></h3>
                         </td>
                     </tr>
                     <tr>
                     <td class="cart_menu">
-                            Cảm ơn quý khách đã đặc hàng!
+                    Thank you for ordering!
                         </td>
                     <tr>
-                          <!-- Mã đơn hàng -->
-                           <tr>
-                        <td>
-                            <h3><b>Mã đơn hàng</b></h3>
-                        </td>
-                    </tr>
-                    <tr>
-                    <td class="cart_menu">
-                       Ma9111
-                        </td>
-                    <tr>
+                         
+                   
                         <!-- Thông tin người đặc -->
                         <tr>
                         <td>
-                            <h3><b>Thông tin người đặt hàng</b></h3>
+                            <h3><b>User information</b></h3>
                         </td>
                     </tr>
                     <tr>
                         <td class="cart_menu">
-                        Tên khách hàng: <?php echo $_SESSION['Name']?>
-                         <br> Địa chỉ nhận hàng: <?php echo $_SESSION['diachi'] ?>
-                         <br> Số điện thoại: <?php echo $_SESSION['sdt'] ?>
+                        Name: <?php echo $_SESSION['Name']?>
+                         <br> Address: <?php echo $_SESSION['diachi'] ?>
+                         <br> Phone: <?php echo $_SESSION['sdt'] ?>
                      
                         </td>
                     <tr>
@@ -185,7 +173,7 @@ session_start();
     <section>
         <section id="cart_items">
             <div class="container">
-                <H3><b>Thông tin giỏ hàng</b></H3>
+                <H3><b>Cart Information</b></H3>
                 <div class="table-responsive cart_info">
                     <table style="width:100%" class="table table-condensed">
                         <thead>
